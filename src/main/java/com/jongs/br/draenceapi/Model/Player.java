@@ -12,18 +12,12 @@ import jakarta.persistence.Id;
 import jakarta.persistence.OneToOne;
 import jakarta.persistence.Table;
 import jakarta.validation.constraints.NotEmpty;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 import jakarta.validation.constraints.Size;
-
-import java.util.List;
 import java.util.UUID;
 @Entity
 @Table(name = "player")
-@EqualsAndHashCode
-@Setter
-@Getter
+@Data
 public class Player {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
@@ -45,25 +39,10 @@ public class Player {
     @Size(min = 15, max = 50)
     private Integer age;
     @Enumerated(EnumType.STRING)
-    private Foot strongFoot;
+    private String strongFoot;
     @Enumerated(EnumType.STRING)
-    private Position position;
-    private List<Position> secondPosition;    
-    private List<Position> thirdPosition;
-    
+    private String position;
     @NotEmpty
     @OneToOne(targetEntity = PlayerAttributes.class ,cascade = CascadeType.ALL, fetch = FetchType.EAGER)
     private PlayerAttributes attributes;
-
-    public enum Foot{
-        LEFT,
-        RIGHT
-    }
-
-    public enum Position{
-        GK,
-        CB, RB, LB,
-        DMF,CMF,RMF,LMF,AMF,
-        RWF,LWF,SS,CF
-    }
 }
