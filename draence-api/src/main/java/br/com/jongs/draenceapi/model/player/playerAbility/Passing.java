@@ -1,4 +1,4 @@
-package br.com.jongs.draenceapi.model;
+package br.com.jongs.draenceapi.model.player.playerAbility;
 
 import java.util.UUID;
 
@@ -10,9 +10,12 @@ import lombok.Data;
 
 @Data
 @Entity
-public class PlayerTeamHistoric {
+public class Passing {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    
+    private int lowPass;
+    private int loftedPass;
+    private int placeKicking;
+    private int curl;
 }

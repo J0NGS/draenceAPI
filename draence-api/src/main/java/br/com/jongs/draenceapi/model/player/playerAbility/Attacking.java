@@ -1,4 +1,5 @@
-package br.com.jongs.draenceapi.model.playerAbility;
+package br.com.jongs.draenceapi.model.player.playerAbility;
+
 
 import java.util.UUID;
 
@@ -10,12 +11,13 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Dribbling {
+public class Attacking {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private int ballControl;
-    private int dribbling;
-    private int tightPossession;
-    private int balance;
+    private Integer offensiveAwareness;
+    private Integer finishing;
+    private Integer kickingPower;
+    private Integer weakFootUsage;
+    private Integer weakFootAccuracy;
 }

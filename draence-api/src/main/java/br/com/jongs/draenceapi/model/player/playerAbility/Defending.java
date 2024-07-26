@@ -1,4 +1,4 @@
-package br.com.jongs.draenceapi.model.playerAbility;
+package br.com.jongs.draenceapi.model.player.playerAbility;
 
 import java.util.UUID;
 
@@ -10,8 +10,13 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Goalkeeping {
+public class Defending {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
+    private int heading;
+    private int jump;
+    private int defensiveAwareness;
+    private int ballWinning;
+    private int aggression;
 }

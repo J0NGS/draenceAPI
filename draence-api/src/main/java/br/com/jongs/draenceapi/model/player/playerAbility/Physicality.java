@@ -1,4 +1,4 @@
-package br.com.jongs.draenceapi.model.playerAbility;
+package br.com.jongs.draenceapi.model.player.playerAbility;
 
 import java.util.UUID;
 
@@ -10,12 +10,14 @@ import lombok.Data;
 
 @Data
 @Entity
-public class Passing {
+public class Physicality {
     @Id
     @GeneratedValue(strategy = GenerationType.UUID)
     private UUID id;
-    private int lowPass;
-    private int loftedPass;
-    private int placeKicking;
-    private int curl;
+    private int speed;
+    private int acceleration;
+    private int physicalContact;
+    private int stamina;
+    private int form;
+    private int injuryResistance;
 }

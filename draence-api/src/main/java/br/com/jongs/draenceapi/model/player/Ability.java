@@ -1,14 +1,14 @@
-package br.com.jongs.draenceapi.model;
+package br.com.jongs.draenceapi.model.player;
 
 import java.util.List;
 import java.util.UUID;
 
-import br.com.jongs.draenceapi.model.playerAbility.Attacking;
-import br.com.jongs.draenceapi.model.playerAbility.Defending;
-import br.com.jongs.draenceapi.model.playerAbility.Dribbling;
-import br.com.jongs.draenceapi.model.playerAbility.Goalkeeping;
-import br.com.jongs.draenceapi.model.playerAbility.Passing;
-import br.com.jongs.draenceapi.model.playerAbility.Physicality;
+import br.com.jongs.draenceapi.model.player.playerAbility.Attacking;
+import br.com.jongs.draenceapi.model.player.playerAbility.Defending;
+import br.com.jongs.draenceapi.model.player.playerAbility.Dribbling;
+import br.com.jongs.draenceapi.model.player.playerAbility.Goalkeeping;
+import br.com.jongs.draenceapi.model.player.playerAbility.Passing;
+import br.com.jongs.draenceapi.model.player.playerAbility.Physicality;
 import jakarta.persistence.ElementCollection;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
