@@ -3,7 +3,6 @@ package br.com.jongs.draenceapi.model;
 import java.util.List;
 import java.util.UUID;
 
-import br.com.jongs.draenceapi.model.player.Player;
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
@@ -28,8 +27,5 @@ public class Club {
     private String country;
     private String description;
     private int yearFundation;
-    
-    @OneToMany(mappedBy = "club", cascade = CascadeType.ALL, orphanRemoval = true)
-    private List<Contract> contracts;
 }
 

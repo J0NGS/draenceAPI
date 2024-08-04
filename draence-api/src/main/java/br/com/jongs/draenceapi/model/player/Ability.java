@@ -27,7 +27,7 @@ public class Ability {
     @ElementCollection
     List<Dribbling> dribbling;
     @ElementCollection
-    List<Defending> defeding;
+    List<Defending> defending;
     @ElementCollection
     List<Passing> passing;
     @ElementCollection

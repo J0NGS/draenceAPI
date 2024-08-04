@@ -44,4 +44,6 @@ public class Contract {
     @OneToMany(cascade = CascadeType.ALL, orphanRemoval = true)
     @JoinColumn(name = "contract_id")
     private List<Clasurement> measurements;
+
+    private boolean activated;
 }
